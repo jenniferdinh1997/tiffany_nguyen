@@ -5,7 +5,12 @@ import './MeetDoctor.css'
 function MeetDoctor() {
   return (
     <section className="meet">
-      <Photo label="Photo: Dr. Tiffany" className="meet__photo" />
+      <Photo
+        src="/images/dr-tiffany-cupping-stretch.webp"
+        alt="Dr. Tiffany stretching a patient's leg during a cupping treatment"
+        position="center 30%"
+        className="meet__photo"
+      />
       <p className="meet__eyebrow">Meet your chiropractor</p>
       <h2 className="meet__title">Hey — I&rsquo;m Dr. Tiffany.</h2>
       <div className="meet__body">

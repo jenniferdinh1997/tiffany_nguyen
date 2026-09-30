@@ -38,7 +38,11 @@ function Approach() {
           Explore my approach
         </Button>
       </div>
-      <Photo label="Photo: treatment" className="approach__photo" />
+      <Photo
+        src="/images/cupping.webp"
+        alt="Cupping therapy on a patient's lower back"
+        className="approach__photo"
+      />
     </section>
   )
 }

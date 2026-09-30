@@ -1,6 +1,7 @@
 /* ---------- Hero ---------- */
 
 .hero {
+  --hero-panel: #4a3026; /* deep Muskwood */
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -12,7 +13,7 @@
   /* Warm gradient shows until the real photo is added. */
   background:
     linear-gradient(to bottom, rgb(0 0 0 / 0.3), transparent 22%, transparent 45%, rgb(0 0 0 / 0.5)),
-    var(--hero-image) center / cover no-repeat,
+    var(--hero-image) center 35% / cover no-repeat,
     linear-gradient(135deg, #8a4a31, var(--brand-muskwood) 45%, var(--brand-cloth));
 }
 
@@ -96,6 +97,23 @@
   .hero__footer,
   .hero__meta {
     animation: none;
+  }
+}
+
+/* Wide screens: the portrait photo sits on the right and fades into a warm
+   solid panel behind the headline, so it is never cropped or stretched. */
+@media (min-width: 861px) {
+  .hero {
+    background:
+      /* The photo is about 0.66x as wide as it is tall, so its left edge sits at 100% - 66svh. */
+      linear-gradient(
+        to right,
+        var(--hero-panel) calc(100% - 66svh),
+        rgb(74 48 38 / 0) calc(100% - 66svh + 220px)
+      ),
+      linear-gradient(to bottom, rgb(0 0 0 / 0.25), transparent 22%, transparent 70%, rgb(0 0 0 / 0.35)),
+      var(--hero-image) right center / auto 100% no-repeat,
+      var(--hero-panel);
   }
 }
 

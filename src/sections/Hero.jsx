@@ -3,8 +3,7 @@ import Navbar from '../components/Navbar.jsx'
 import { BOOKING_URL } from '../content/site.js'
 import './Hero.css'
 
-// Drop the hero photo at public/images/hero.jpg to replace the placeholder background.
-const HERO_IMAGE = '/images/hero.jpg'
+const HERO_IMAGE = '/images/neck-adjustment.webp'
 
 function Hero() {
   return (

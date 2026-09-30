@@ -63,6 +63,10 @@ export const firstVisitSteps = [
     number: '02',
     name: 'Clarity',
     title: 'Then, we assess.',
+    photo: {
+      src: '/images/low-back-adjustment.webp',
+      alt: "Dr. Tiffany assessing a patient's lower back",
+    },
     text: "I'll look at the bigger picture — not just the area that hurts — so we can better understand what's contributing to what you're experiencing.",
   },
   {
@@ -75,6 +79,10 @@ export const firstVisitSteps = [
     number: '04',
     name: 'Restore',
     title: 'Then we get to work.',
+    photo: {
+      src: '/images/muscle-scraping.webp',
+      alt: "Instrument-assisted muscle scraping on a patient's lower back",
+    },
     text: 'Your treatment may include hands-on chiropractic care, soft tissue work, cupping, muscle scraping, or other appropriate techniques.',
   },
   {

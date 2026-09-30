@@ -13,8 +13,17 @@ function Timeline() {
       <ol className="timeline__list">
         {firstVisitSteps.map((step, i) => (
           <li key={step.number} className={`timeline__step${i % 2 ? ' is-flipped' : ''}`}>
-            <div className="timeline__polaroid" aria-hidden="true">
-              <div className="timeline__polaroid-photo" />
+            <div className="timeline__polaroid">
+              {step.photo ? (
+                <img
+                  className="timeline__polaroid-photo"
+                  src={step.photo.src}
+                  alt={step.photo.alt}
+                  loading="lazy"
+                />
+              ) : (
+                <div className="timeline__polaroid-photo" aria-hidden="true" />
+              )}
             </div>
             <span className="timeline__number">{i + 1}</span>
             <div className="timeline__text">
