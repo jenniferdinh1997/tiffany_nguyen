@@ -1,0 +1,77 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 0 var(--page-gutter) clamp(24px, 6vh, 80px);
+  overflow: hidden;
+  color: var(--color-cream);
+  /* Warm gradient shows until the real photo is added. */
+  background:
+    linear-gradient(to bottom, rgb(0 0 0 / 0.25), transparent 20%, transparent 55%, rgb(0 0 0 / 0.35)),
+    var(--hero-image) center / cover no-repeat,
+    linear-gradient(135deg, #7a6a52, #b59878 45%, #d9c5ad);
+}
+
+.hero__content {
+  width: 100%;
+}
+
+.hero__tagline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 14px;
+  margin: 0 0 clamp(8px, 2vh, 24px);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1.8vw, 1.9rem);
+  letter-spacing: -0.02em;
+}
+
+.hero__heart {
+  font-size: 0.6em;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(4.5rem, 15vw, 16rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.hero__tagline,
+.hero__title {
+  animation: hero-rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.hero__title {
+  animation-delay: 0.15s;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__tagline,
+  .hero__title {
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__tagline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__heart {
+    display: none;
+  }
+}

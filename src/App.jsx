@@ -1,9 +1,9 @@
-import './App.css'
+import Hero from './components/Hero.jsx'
 
 function App() {
   return (
     <main>
-      {/* Part 1 and Part 2 sections will be added here once the designs are provided */}
+      <Hero />
     </main>
   )
 }
