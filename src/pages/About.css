@@ -1,0 +1,14 @@
+.about__photo {
+  aspect-ratio: 16 / 9;
+}
+
+.about__belong {
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 7vw, 6.5rem);
+}
+
+@media (max-width: 600px) {
+  .about__photo {
+    aspect-ratio: 4 / 5;
+  }
+}

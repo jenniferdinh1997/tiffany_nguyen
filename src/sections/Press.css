@@ -1,0 +1,83 @@
+.press {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(32px, 8vw, 140px);
+  padding: clamp(56px, 8vw, 110px) var(--page-gutter);
+  overflow: hidden;
+  color: var(--color-cream);
+  isolation: isolate;
+}
+
+/* Blurred treatment-room photo behind everything. */
+.press::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  z-index: -1;
+  background:
+    linear-gradient(rgb(40 36 34 / 0.45), rgb(40 36 34 / 0.45)),
+    url('/images/treatment-room.jpg') center / cover;
+  filter: blur(6px);
+}
+
+.press__phone {
+  width: clamp(180px, 22vw, 300px);
+  padding: 10px;
+  border-radius: 40px;
+  background: #0b0b0b;
+  box-shadow: 0 30px 60px rgb(0 0 0 / 0.35);
+}
+
+.press__phone img {
+  width: 100%;
+  aspect-ratio: 1062 / 2301;
+  border-radius: 30px;
+}
+
+.press__text {
+  text-align: center;
+}
+
+.press__label {
+  font-family: var(--font-label);
+  font-size: clamp(1.75rem, 3.2vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-shadow: 0 2px 12px rgb(0 0 0 / 0.25);
+}
+
+.press__name {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6.2vw, 5.75rem);
+  font-style: italic;
+  line-height: 1.05;
+}
+
+.press__link {
+  display: inline-block;
+  margin-top: clamp(32px, 5vw, 64px);
+  font-family: var(--font-label);
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.press__link:hover {
+  border-color: currentColor;
+}
+
+@media (max-width: 700px) {
+  .press {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .press__text {
+    order: -1;
+  }
+}

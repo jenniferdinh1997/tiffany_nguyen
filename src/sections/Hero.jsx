@@ -1,0 +1,42 @@
+import Button from '../components/Button.jsx'
+import Navbar from '../components/Navbar.jsx'
+import { BOOKING_URL } from '../content/site.js'
+import './Hero.css'
+
+// Drop the hero photo at public/images/hero.jpg to replace the placeholder background.
+const HERO_IMAGE = '/images/hero.jpg'
+
+function Hero() {
+  return (
+    <section className="hero" style={{ '--hero-image': `url(${HERO_IMAGE})` }}>
+      <Navbar overlay />
+
+      <div className="hero__content">
+        <p className="hero__tagline">
+          <span>Concierge Mobile Chiropractic</span>
+          <span className="hero__heart" aria-hidden="true">
+            ♥
+          </span>
+          <span>Orange County</span>
+        </p>
+        <h1 className="hero__title">
+          Move better.
+          <br />
+          Feel stronger.
+        </h1>
+        <div className="hero__footer">
+          <p className="hero__intro">
+            Personalized, hands-on chiropractic care brought directly to you — built around your
+            body, your goals, and the life you want to get back to.
+          </p>
+          <Button to={BOOKING_URL} variant="light">
+            Start your journey
+          </Button>
+        </div>
+        <p className="hero__meta">One-on-one care · 60-minute house calls · Orange County</p>
+      </div>
+    </section>
+  )
+}
+
+export default Hero

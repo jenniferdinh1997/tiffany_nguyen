@@ -1,0 +1,58 @@
+.final-cta {
+  padding: clamp(16px, 2.4vw, 32px);
+  background: var(--color-black);
+}
+
+.final-cta__frame {
+  display: grid;
+  place-items: center;
+  min-height: clamp(520px, 60vw, 720px);
+  padding: clamp(24px, 5vw, 64px) 16px;
+  border-radius: 10px;
+  background:
+    linear-gradient(rgb(0 0 0 / 0.25), rgb(0 0 0 / 0.25)),
+    url('/images/treatment-room.jpg') center / cover;
+}
+
+.final-cta__card {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  width: min(100%, 560px);
+  padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 48px);
+  border-radius: 8px;
+  background: rgb(10 10 10 / 0.72);
+  backdrop-filter: blur(10px);
+  color: var(--color-cream);
+  text-align: center;
+}
+
+.final-cta__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(253 248 243 / 0.7);
+}
+
+.final-cta__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 4.4vw, 3.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.final-cta__body {
+  display: grid;
+  gap: 0.6em;
+  color: rgb(253 248 243 / 0.85);
+}
+
+.final-cta__body .pull-quote {
+  color: var(--color-cream);
+}
+
+.final-cta__alt {
+  font-size: 0.9rem;
+  color: rgb(253 248 243 / 0.8);
+}
