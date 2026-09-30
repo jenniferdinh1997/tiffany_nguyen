@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import About from './pages/About.jsx'
 import Approach from './pages/Approach.jsx'
@@ -12,9 +12,12 @@ import NotFound from './pages/NotFound.jsx'
 import Services from './pages/Services.jsx'
 import WhatITreat from './pages/WhatITreat.jsx'
 
+// Preview builds (VITE_HASH_ROUTER=1) use #/page links so they work on hosts without server rewrites.
+const Router = import.meta.env.VITE_HASH_ROUTER ? HashRouter : BrowserRouter
+
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
@@ -30,7 +33,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   )
 }
 
