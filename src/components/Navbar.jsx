@@ -1,21 +1,18 @@
 import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import { BOOKING_URL, navLinks } from '../content/site.js'
 import './Navbar.css'
 
-const links = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'What to Expect', href: '#expect' },
-  { label: 'FAQ', href: '#faq' },
-]
-
-function Navbar() {
+// overlay: white text floating over the home hero photo. Otherwise a solid cream bar.
+function Navbar({ overlay = false }) {
   const [open, setOpen] = useState(false)
+  const close = () => setOpen(false)
 
   return (
-    <header className="navbar">
-      <a href="#top" className="navbar__brand">
-        Kor Body
-      </a>
+    <header className={`navbar${overlay ? ' navbar--overlay' : ''}`}>
+      <Link to="/" className="navbar__brand" onClick={close}>
+        Kör Body
+      </Link>
 
       <button
         type="button"
@@ -28,14 +25,14 @@ function Navbar() {
       </button>
 
       <nav id="navbar-menu" className={`navbar__menu${open ? ' is-open' : ''}`}>
-        {links.map((link) => (
-          <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+        {navLinks.map((link) => (
+          <NavLink key={link.to} to={link.to} onClick={close}>
             {link.label}
-          </a>
+          </NavLink>
         ))}
-        <a href="#book" className="navbar__cta" onClick={() => setOpen(false)}>
+        <Link to={BOOKING_URL} className="navbar__cta" onClick={close}>
           Book a visit
-        </a>
+        </Link>
       </nav>
     </header>
   )
