@@ -41,8 +41,8 @@
 }
 
 .press__label {
-  font-family: var(--font-plex);
-  font-size: clamp(2rem, 3.6vw, 3.25rem);
+  font-family: var(--font-label);
+  font-size: clamp(1.75rem, 3.2vw, 2.9rem);
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -50,7 +50,7 @@
 }
 
 .press__name {
-  font-family: var(--font-playfair);
+  font-family: var(--font-serif);
   font-size: clamp(3rem, 6.2vw, 5.75rem);
   font-style: italic;
   line-height: 1.05;
@@ -59,8 +59,8 @@
 .press__link {
   display: inline-block;
   margin-top: clamp(32px, 5vw, 64px);
-  font-family: var(--font-plex);
-  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  font-family: var(--font-label);
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
   font-weight: 600;
   text-transform: uppercase;
   border-bottom: 1px solid transparent;

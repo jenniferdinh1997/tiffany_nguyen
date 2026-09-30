@@ -15,7 +15,7 @@
 
 .newsletter__title {
   margin: 12px 0 40px;
-  font-family: var(--font-playfair);
+  font-family: var(--font-serif);
   font-size: clamp(2.25rem, 4.4vw, 3.5rem);
 }
 
@@ -53,12 +53,12 @@
 }
 
 .envelope__card-script {
-  font-family: var(--font-playfair);
+  font-family: var(--font-serif);
   font-style: italic;
 }
 
 .envelope__card-mono {
-  font-family: ui-monospace, monospace;
+  font-family: var(--font-label);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -73,7 +73,7 @@
   border-radius: 8px;
   background: var(--brand-lotso-bear);
   color: rgb(255 255 255 / 0.3);
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: 2rem;
 }
 

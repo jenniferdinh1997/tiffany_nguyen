@@ -20,7 +20,7 @@
 }
 
 .inquire__title {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: clamp(4rem, 12vw, 9rem);
   line-height: 1;
   text-transform: uppercase;

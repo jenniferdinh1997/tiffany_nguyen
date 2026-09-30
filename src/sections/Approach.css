@@ -19,14 +19,14 @@
 
 .approach__title {
   margin: 14px 0 6px;
-  font-family: var(--font-playfair);
-  font-size: clamp(2.25rem, 4.2vw, 3.75rem);
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 4.6vw, 4.25rem);
 }
 
 .approach__sub {
   margin-bottom: 28px;
-  font-family: var(--font-playfair);
-  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
   font-style: italic;
   color: var(--brand-lotso-bear);
 }

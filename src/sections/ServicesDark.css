@@ -39,8 +39,7 @@
 }
 
 .services-dark__name {
-  font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
 }
 
 .services-dark__detail {

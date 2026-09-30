@@ -1,7 +1,6 @@
 .right-place {
   background: var(--color-blush);
   color: var(--color-rose);
-  font-family: var(--font-plex);
 }
 
 .right-place__statement {
@@ -19,11 +18,9 @@
 
 .right-place__title {
   margin-bottom: clamp(28px, 4vw, 48px);
-  font-family: var(--font-plex);
-  font-size: clamp(1.75rem, 3.2vw, 2.6rem);
-  font-weight: 700;
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
   text-align: center;
-  text-transform: uppercase;
   color: var(--brand-lotso-bear);
 }
 
@@ -46,7 +43,6 @@
 
 .marquee__label {
   margin-bottom: 16px;
-  font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -71,7 +67,8 @@
 }
 
 .marquee__track li {
-  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  font-family: var(--font-label);
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
   font-weight: 600;
   white-space: nowrap;
 }
@@ -108,15 +105,17 @@
   justify-content: center;
   gap: 16px 32px;
   padding: clamp(40px, 5vw, 64px) var(--page-gutter);
-  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
   font-style: italic;
-  font-weight: 600;
+  line-height: 1.2;
   text-align: center;
 }
 
 .right-place__footer .button {
   border-color: var(--color-rose);
   color: var(--color-rose);
+  font-family: var(--font-label);
   font-style: normal;
 }
 

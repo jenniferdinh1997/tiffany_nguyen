@@ -20,7 +20,7 @@
 }
 
 .journal-hero__title {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: clamp(4rem, 13vw, 10rem);
   line-height: 1;
   text-transform: uppercase;

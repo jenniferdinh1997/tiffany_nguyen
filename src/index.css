@@ -23,11 +23,15 @@
   --color-sky: var(--brand-turquoise);
   --color-black: #0b0b0b;
   --photo-placeholder: linear-gradient(145deg, var(--brand-muskwood), var(--brand-cloth));
+  /* Brand type
+     Instrument Serif: headlines (H1, H2), italic for single accent words
+     Absans: body text and paragraphs, regular only
+     Montserrat: buttons, labels, H3 and H4, semibold or bold
+     Playfair Display: backup display font, not currently used */
   --font-serif: 'Instrument Serif', Georgia, serif;
-  --font-playfair: 'Playfair Display', Georgia, serif;
-  --font-plex: 'IBM Plex Sans', system-ui, sans-serif;
-  --font-display: 'Libre Caslon Display', Georgia, serif;
-  --font-sans: 'Montserrat', system-ui, sans-serif;
+  --font-sans: 'Absans', 'DM Sans', system-ui, sans-serif;
+  --font-label: 'Montserrat', system-ui, sans-serif;
+  --font-backup: 'Playfair Display', Georgia, serif;
   --page-gutter: clamp(16px, 12.5vw, 250px);
   --section-space: clamp(72px, 11vw, 160px);
 }
@@ -70,13 +74,57 @@ p {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: var(--font-serif);
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.01em;
   text-wrap: balance;
+}
+
+h3,
+h4 {
+  font-family: var(--font-label);
+  font-weight: 600;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+/* Italic accent words inside headlines, e.g. <em>Always evolving.</em> */
+h1 em,
+h2 em {
+  font-style: italic;
+}
+
+/* Labels: eyebrows, buttons, small caps text */
+.eyebrow,
+.button,
+.text-link,
+.card__label,
+.form__field,
+.navbar,
+.footer__nav,
+.footer__sub,
+.footer__social,
+.faq__question,
+.articles__meta,
+.marquee__label,
+.journal-hero__eyebrow,
+.inquire__eyebrow,
+.meet__eyebrow,
+.approach__eyebrow,
+.mobile-visit__eyebrow,
+.services-dark__eyebrow,
+.services-dark__detail,
+.investment__eyebrow,
+.credentials-stamps__eyebrow,
+.testimonials__eyebrow,
+.newsletter__eyebrow,
+.final-cta__eyebrow,
+.timeline__eyebrow,
+.right-place__eyebrow,
+.stamp__detail {
+  font-family: var(--font-label);
 }
 
 :focus-visible {
@@ -292,7 +340,7 @@ h3 {
 }
 
 .card h3 {
-  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
 }
 
 .card p {
@@ -433,7 +481,7 @@ h3 {
 .page-header__title {
   max-width: 16ch;
   margin-bottom: 32px;
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: clamp(2.75rem, 7vw, 6.5rem);
   line-height: 0.98;
 }
@@ -465,5 +513,5 @@ h3 {
 
 
 .feature-card h3 {
-  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
 }
