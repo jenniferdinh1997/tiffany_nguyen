@@ -8,7 +8,7 @@
   aspect-ratio: 3 / 2;
   margin-bottom: 20px;
   border-radius: 6px;
-  background: linear-gradient(145deg, #b59878, #e3d3c0);
+  background: var(--photo-placeholder);
 }
 
 .articles__title {

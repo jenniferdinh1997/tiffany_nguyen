@@ -2,7 +2,7 @@
   display: grid;
   justify-items: center;
   padding: clamp(64px, 8vw, 112px) var(--page-gutter);
-  background: #f8f4ec;
+  background: #fff6dd; /* Warm Gold tint */
   text-align: center;
 }
 
@@ -31,7 +31,7 @@
 .envelope__back {
   position: absolute;
   inset: 0;
-  background: #a31c1f;
+  background: var(--brand-muskwood);
   clip-path: polygon(50% 0, 100% 36%, 100% 100%, 0 100%, 0 36%);
   border-radius: 8px;
 }
@@ -46,7 +46,7 @@
   width: 100px;
   height: 118px;
   border-radius: 6px;
-  background: linear-gradient(to bottom, #fff 55%, #ff6a1a);
+  background: linear-gradient(to bottom, #fff 55%, var(--brand-warm-gold));
   box-shadow: 0 6px 14px rgb(0 0 0 / 0.2);
   transform: translateX(-50%);
   animation: envelope-peek 3s ease-in-out infinite alternate;
@@ -71,7 +71,7 @@
   place-items: center;
   height: 92px;
   border-radius: 8px;
-  background: #c0262a;
+  background: var(--brand-lotso-bear);
   color: rgb(255 255 255 / 0.3);
   font-family: var(--font-display);
   font-size: 2rem;

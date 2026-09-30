@@ -33,11 +33,15 @@
   margin: 0;
   padding: clamp(20px, 2.5vw, 32px);
   border-radius: 14px;
-  background: #f7f2ea;
+  background: var(--color-linen);
 }
 
 .testimonials__card:nth-child(3n) {
-  background: #e4d8c8;
+  background: var(--brand-cloth);
+}
+
+.testimonials__card:nth-child(3n) figcaption {
+  color: #4f4842;
 }
 
 .testimonials__card blockquote {

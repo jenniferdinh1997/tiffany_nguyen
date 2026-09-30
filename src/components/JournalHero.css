@@ -7,7 +7,7 @@
   background:
     linear-gradient(to bottom, rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.55)),
     url('/images/journal.jpg') center / cover,
-    linear-gradient(160deg, #3b3129, #7a6a52);
+    linear-gradient(160deg, #3f4a2f, var(--brand-verdant));
   color: var(--color-cream);
   text-align: center;
 }

@@ -23,6 +23,7 @@
   font-size: clamp(1.75rem, 3.2vw, 2.6rem);
   font-weight: 700;
   text-transform: uppercase;
+  color: var(--brand-lotso-bear);
 }
 
 .timeline__list {
@@ -41,7 +42,7 @@
   bottom: 0;
   left: 50%;
   width: 1px;
-  background: #8c8c8c;
+  background: var(--brand-cloth);
 }
 
 .timeline__step {
@@ -73,7 +74,7 @@
 
 .timeline__polaroid-photo {
   aspect-ratio: 4 / 3;
-  background: linear-gradient(145deg, #b59878, #e3d3c0);
+  background: var(--photo-placeholder);
 }
 
 .timeline__number {
@@ -85,7 +86,7 @@
   place-items: center;
   width: 44px;
   height: 44px;
-  border: 1px solid #555;
+  border: 1px solid var(--brand-lotso-bear);
   border-radius: 50%;
   background: var(--color-blush);
   color: var(--color-ink);
@@ -105,6 +106,7 @@
   font-family: var(--font-plex);
   font-size: clamp(1.5rem, 2.4vw, 2rem);
   font-weight: 600;
+  color: var(--brand-lotso-bear);
 }
 
 .timeline__step-title {

@@ -13,7 +13,7 @@
   background:
     linear-gradient(to bottom, rgb(0 0 0 / 0.3), transparent 22%, transparent 45%, rgb(0 0 0 / 0.5)),
     var(--hero-image) center / cover no-repeat,
-    linear-gradient(135deg, #7a6a52, #b59878 45%, #d9c5ad);
+    linear-gradient(135deg, #8a4a31, var(--brand-muskwood) 45%, var(--brand-cloth));
 }
 
 .hero__content {

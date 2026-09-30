@@ -28,7 +28,7 @@
   font-family: var(--font-playfair);
   font-size: clamp(1.3rem, 2vw, 1.7rem);
   font-style: italic;
-  color: var(--color-rose);
+  color: var(--brand-lotso-bear);
 }
 
 .approach__intro,
@@ -53,7 +53,7 @@
 .approach__list li::before {
   content: '♥';
   font-size: 0.7rem;
-  color: #f3a7b9;
+  color: var(--brand-muskwood);
 }
 
 .approach__body {

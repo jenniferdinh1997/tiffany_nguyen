@@ -26,7 +26,7 @@
   margin-top: 32px;
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  color: #d9b8a0;
+  color: var(--brand-anthurium);
 }
 
 .footer__nav {
