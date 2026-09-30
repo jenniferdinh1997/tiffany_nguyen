@@ -5,22 +5,10 @@ import './Footer.css'
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__top">
-        <div>
-          <p className="footer__brand">Kör Body</p>
-          <p className="footer__sub">Chiropractic &amp; Wellness</p>
-        </div>
-        <div className="footer__details">
-          <p>Concierge Mobile Chiropractic · Orange County, CA</p>
-          <p>Dr. Tiffany Nguyen, DC</p>
-          <a
-            href={`https://www.instagram.com/${INSTAGRAM_HANDLE}/`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            @{INSTAGRAM_HANDLE}
-          </a>
-        </div>
+      <div className="footer__brand">
+        <p className="footer__name">Kör Body</p>
+        <p className="footer__sub">(Chiropractic &amp; Wellness)</p>
+        <p className="footer__signoff">You&rsquo;ve got this.</p>
       </div>
 
       <nav className="footer__nav" aria-label="Footer">
@@ -31,7 +19,19 @@ function Footer() {
         ))}
       </nav>
 
-      <p className="footer__signoff">You&rsquo;ve got this.</p>
+      <div className="footer__details">
+        <a
+          href={`https://www.instagram.com/${INSTAGRAM_HANDLE}/`}
+          target="_blank"
+          rel="noreferrer"
+          className="footer__social"
+        >
+          Instagram
+        </a>
+        <p>↳ @{INSTAGRAM_HANDLE}</p>
+        <p>↳ Dr. Tiffany Nguyen, DC</p>
+        <p>↳ Concierge Mobile Chiropractic · Orange County, CA</p>
+      </div>
     </footer>
   )
 }

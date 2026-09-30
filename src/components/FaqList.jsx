@@ -3,8 +3,8 @@ import './FaqList.css'
 function FaqList({ items }) {
   return (
     <div className="faq">
-      {items.map((item) => (
-        <details key={item.question} className="faq__item">
+      {items.map((item, i) => (
+        <details key={item.question} className="faq__item" open={i === 0}>
           <summary className="faq__question">{item.question}</summary>
           <p className="faq__answer">{item.answer}</p>
         </details>

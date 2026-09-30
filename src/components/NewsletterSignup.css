@@ -1,0 +1,119 @@
+.newsletter {
+  display: grid;
+  justify-items: center;
+  padding: clamp(64px, 8vw, 112px) var(--page-gutter);
+  background: #f8f4ec;
+  text-align: center;
+}
+
+.newsletter__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.newsletter__title {
+  margin: 12px 0 40px;
+  font-family: var(--font-playfair);
+  font-size: clamp(2.25rem, 4.4vw, 3.5rem);
+}
+
+/* ---------- Envelope illustration ---------- */
+
+.envelope {
+  position: relative;
+  width: 260px;
+  height: 220px;
+  margin-bottom: 40px;
+}
+
+.envelope__back {
+  position: absolute;
+  inset: 0;
+  background: #a31c1f;
+  clip-path: polygon(50% 0, 100% 36%, 100% 100%, 0 100%, 0 36%);
+  border-radius: 8px;
+}
+
+.envelope__card {
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  display: grid;
+  place-content: center;
+  gap: 4px;
+  width: 100px;
+  height: 118px;
+  border-radius: 6px;
+  background: linear-gradient(to bottom, #fff 55%, #ff6a1a);
+  box-shadow: 0 6px 14px rgb(0 0 0 / 0.2);
+  transform: translateX(-50%);
+  animation: envelope-peek 3s ease-in-out infinite alternate;
+}
+
+.envelope__card-script {
+  font-family: var(--font-playfair);
+  font-style: italic;
+}
+
+.envelope__card-mono {
+  font-family: ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.envelope__front {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  place-items: center;
+  height: 92px;
+  border-radius: 8px;
+  background: #c0262a;
+  color: rgb(255 255 255 / 0.3);
+  font-family: var(--font-display);
+  font-size: 2rem;
+}
+
+@keyframes envelope-peek {
+  to {
+    transform: translate(-50%, -18px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .envelope__card {
+    animation: none;
+  }
+}
+
+.newsletter__text {
+  max-width: 34rem;
+  color: var(--color-muted);
+}
+
+.newsletter__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: min(100%, 480px);
+  margin-top: 32px;
+}
+
+.newsletter__form input {
+  flex: 1 1 220px;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+}
+
+.newsletter__status {
+  margin-top: 16px;
+  color: var(--color-muted);
+}

@@ -161,18 +161,22 @@ export const extraFaqs = [
 export const articles = [
   {
     title: 'Why does my pain keep coming back?',
+    category: 'Pain + recovery',
     teaser: "Sometimes the painful area isn't the whole story.",
   },
   {
     title: 'What actually happens during a chiropractic adjustment?',
+    category: 'Chiropractic 101',
     teaser: "Let's take the mystery out of chiropractic care.",
   },
   {
     title: "You don't have to be an athlete to start strength training",
+    category: 'Strength',
     teaser: 'Everyone starts somewhere.',
   },
   {
     title: 'What should I expect from a mobile chiropractic visit?',
+    category: 'Mobile care',
     teaser: 'No waiting room required.',
   },
 ]

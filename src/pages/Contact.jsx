@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import FinalCta from '../components/FinalCta.jsx'
-import PageHeader from '../components/PageHeader.jsx'
+import './Contact.css'
 
 // TODO: connect to a HIPAA-compliant form or your practice software before going live,
 // since visitors may describe health concerns here.
@@ -9,55 +9,60 @@ function Contact() {
 
   return (
     <>
-      <PageHeader eyebrow="Contact" title="Have a question?">
-        <p>Not sure if Kör is the right fit?</p>
-        <p>That&rsquo;s okay.</p>
-        <p>Tell me what&rsquo;s going on and I&rsquo;ll help you figure out the next step.</p>
-      </PageHeader>
+      <section className="inquire">
+        <p className="inquire__eyebrow">Have a question?</p>
+        <h1 className="inquire__title">Inquire</h1>
+        <p className="inquire__text">Not sure if Kör is the right fit? That&rsquo;s okay.</p>
+      </section>
 
-      <section id="question" className="section section--sand">
+      <section id="question" className="contact">
+        <h2 className="contact__title">Tell me what&rsquo;s going on.</h2>
+        <p className="contact__intro">
+          I&rsquo;ll help you figure out the next step.
+        </p>
+
         <form
-          className="form contact__form"
+          className="contact__form"
           onSubmit={(e) => {
             e.preventDefault()
             setSubmitted(true)
           }}
         >
-          <label className="form__field">
+          <label>
             First name
-            <input name="firstName" required autoComplete="given-name" />
+            <input name="firstName" required autoComplete="given-name" placeholder="Jane" />
           </label>
-          <label className="form__field">
+          <label>
             Last name
-            <input name="lastName" required autoComplete="family-name" />
+            <input name="lastName" required autoComplete="family-name" placeholder="Smith" />
           </label>
-          <label className="form__field">
+          <label className="contact__full">
             Email
             <input type="email" name="email" required autoComplete="email" />
           </label>
-          <label className="form__field">
+          <label className="contact__full">
             Phone
             <input type="tel" name="phone" autoComplete="tel" />
           </label>
-          <label className="form__field form__field--full">
+          <label className="contact__full">
             What&rsquo;s going on?
             <textarea name="whatsGoingOn" />
           </label>
-          <label className="form__field form__field--full">
+          <label className="contact__full">
             What would you like help with?
             <textarea name="helpWith" />
           </label>
-          <label className="form__field form__field--full">
+          <label className="contact__full">
             Is there anything else you&rsquo;d like me to know?
             <textarea name="anythingElse" />
           </label>
-          <div className="form__field--full">
-            <button type="submit" className="button">
+          <div className="contact__full">
+            <button type="submit" className="button button--light">
               Send message
             </button>
           </div>
           {submitted && (
-            <p className="form__status" role="status">
+            <p className="contact__full contact__status" role="status">
               This form isn&rsquo;t connected yet — messages are not being sent.
             </p>
           )}

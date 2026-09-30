@@ -1,0 +1,32 @@
+.journal-hero {
+  display: grid;
+  align-content: end;
+  justify-items: center;
+  min-height: clamp(420px, 60vw, 720px);
+  padding: 64px var(--page-gutter) clamp(56px, 8vw, 110px);
+  background:
+    linear-gradient(to bottom, rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.55)),
+    url('/images/journal.jpg') center / cover,
+    linear-gradient(160deg, #3b3129, #7a6a52);
+  color: var(--color-cream);
+  text-align: center;
+}
+
+.journal-hero__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.journal-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 13vw, 10rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.journal-hero__text {
+  max-width: 34rem;
+  color: rgb(253 248 243 / 0.9);
+}

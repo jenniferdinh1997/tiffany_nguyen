@@ -1,23 +1,27 @@
 import { Link } from 'react-router-dom'
 import { BOOKING_URL } from '../content/site.js'
 import Button from './Button.jsx'
+import './FinalCta.css'
 
+// "Shall we begin?" style closing section: frosted card over a photo.
 function FinalCta({ children }) {
   return (
-    <section id="book" className="section section--ink final-cta">
-      <p className="eyebrow">Ready when you are</p>
-      <h2 className="heading final-cta__title">Let&rsquo;s figure out what your body needs.</h2>
-      <div className="prose prose--lead">{children}</div>
-      <div className="actions">
-        <Button to={BOOKING_URL} variant="light">
-          Book your first visit
-        </Button>
-        <span>
-          Not ready to book?{' '}
-          <Link to="/contact#question" className="text-link">
-            Ask a question
-          </Link>
-        </span>
+    <section id="book" className="final-cta">
+      <div className="final-cta__frame">
+        <div className="final-cta__card">
+          <p className="final-cta__eyebrow">Ready when you are</p>
+          <h2 className="final-cta__title">Let&rsquo;s figure out what your body needs.</h2>
+          <div className="final-cta__body">{children}</div>
+          <Button to={BOOKING_URL} variant="ghost">
+            Book your first visit
+          </Button>
+          <p className="final-cta__alt">
+            Not ready to book?{' '}
+            <Link to="/contact#question" className="text-link">
+              Ask a question
+            </Link>
+          </p>
+        </div>
       </div>
     </section>
   )

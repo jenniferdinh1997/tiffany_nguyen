@@ -1,62 +1,64 @@
 .footer {
   display: grid;
-  gap: 48px;
-  padding: clamp(64px, 8vw, 120px) var(--page-gutter) 40px;
-  border-top: 1px solid rgb(253 248 243 / 0.12);
-  background: var(--color-ink);
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  padding: clamp(48px, 6vw, 80px) var(--page-gutter);
+  border-top: 1px solid rgb(253 248 243 / 0.15);
+  background: var(--color-black);
   color: var(--color-cream);
 }
 
-.footer__top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-.footer__brand {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 7vw, 6rem);
+.footer__name {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1;
 }
 
 .footer__sub {
-  margin-top: 10px;
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgb(253 248 243 / 0.7);
+}
+
+.footer__signoff {
+  margin-top: 32px;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: #d9b8a0;
+}
+
+.footer__nav {
+  display: grid;
+  align-content: start;
+  gap: 2px;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.footer__nav a:hover,
+.footer__social:hover {
+  opacity: 0.65;
 }
 
 .footer__details {
   display: grid;
-  gap: 6px;
-  align-content: end;
-  color: rgb(253 248 243 / 0.8);
+  align-content: start;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: rgb(253 248 243 / 0.85);
 }
 
-.footer__details a {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.footer__nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 28px;
-  padding-top: 32px;
-  border-top: 1px solid rgb(253 248 243 / 0.2);
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
+.footer__social {
+  font-weight: 600;
   text-transform: uppercase;
+  color: var(--color-cream);
 }
 
-.footer__nav a:hover {
-  opacity: 0.65;
-}
-
-.footer__signoff {
-  font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  color: #d9b8a0;
+@media (max-width: 860px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
 }

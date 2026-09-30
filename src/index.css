@@ -5,7 +5,14 @@
   --color-ink: #1c1917;
   --color-muted: #625a53;
   --color-line: rgb(28 25 23 / 0.14);
+  --color-rose: #a64b4b;
+  --color-blush: #f4ece9;
+  --color-linen: #f3efe7;
+  --color-sky: #b3d4de;
+  --color-black: #0b0b0b;
   --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-plex: 'IBM Plex Sans', system-ui, sans-serif;
   --font-display: 'Libre Caslon Display', Georgia, serif;
   --font-sans: 'Montserrat', system-ui, sans-serif;
   --page-gutter: clamp(16px, 12.5vw, 250px);
@@ -177,10 +184,10 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 12px 26px;
+  min-height: 46px;
+  padding: 12px 24px;
   border: 1px solid var(--color-ink);
-  border-radius: 999px;
+  border-radius: 4px;
   background: var(--color-ink);
   color: var(--color-cream);
   font: inherit;
@@ -218,6 +225,26 @@ h3 {
 .button--light:hover {
   background: transparent;
   color: var(--color-cream);
+}
+
+.button--ghost {
+  border-color: rgb(253 248 243 / 0.8);
+  background: transparent;
+  color: var(--color-cream);
+}
+
+.button--ghost:hover {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .text-link {
@@ -398,13 +425,6 @@ h3 {
   line-height: 0.98;
 }
 
-/* ---------- Final CTA ---------- */
-
-.final-cta__title {
-  max-width: 14ch;
-  font-family: var(--font-display);
-  font-size: clamp(2.75rem, 6.5vw, 6rem);
-}
 
 .services__list {
   margin-top: 20px;
@@ -416,10 +436,21 @@ h3 {
   gap: 20px;
 }
 
+.journal-list {
+  background: var(--color-linen);
+}
+
+.journal-list__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
 .contact__form {
   max-width: 56rem;
 }
 
-.newsletter {
-  border-top: 1px solid var(--color-line);
+
+.feature-card h3 {
+  font-size: clamp(2rem, 3.4vw, 3rem);
 }

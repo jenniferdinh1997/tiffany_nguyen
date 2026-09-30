@@ -1,47 +1,59 @@
 import { useState } from 'react'
+import './NewsletterSignup.css'
 
 // TODO: connect to an email service (e.g. Mailchimp, Flodesk) so sign-ups are saved.
 function NewsletterSignup() {
   const [submitted, setSubmitted] = useState(false)
 
   return (
-    <section className="section newsletter">
-      <div className="split">
-        <div>
-          <p className="eyebrow">Stay connected</p>
-          <h2 className="heading">Come hang out.</h2>
-          <div className="prose">
-            <p>
-              Movement tips, wellness education, practice updates, behind-the-scenes moments, and
-              the occasional special offer.
-            </p>
-            <p>No weird spam. Just things I actually think you&rsquo;ll find useful.</p>
-          </div>
-        </div>
+    <section className="newsletter">
+      <p className="newsletter__eyebrow">Stay connected</p>
+      <h2 className="newsletter__title">
+        Come <em>hang out.</em>
+      </h2>
 
-        <form
-          className="form"
-          onSubmit={(e) => {
-            e.preventDefault()
-            setSubmitted(true)
-          }}
-        >
-          <label className="form__field form__field--full">
-            Your email
-            <input type="email" name="email" required autoComplete="email" />
-          </label>
-          <div className="form__field--full">
-            <button type="submit" className="button">
-              Join the circle
-            </button>
-          </div>
-          {submitted && (
-            <p className="form__status" role="status">
-              Sign-ups aren&rsquo;t connected yet — this form is a preview.
-            </p>
-          )}
-        </form>
+      <div className="envelope" aria-hidden="true">
+        <div className="envelope__back" />
+        <div className="envelope__card">
+          <span className="envelope__card-script">You&rsquo;re</span>
+          <span className="envelope__card-mono">INVITED</span>
+        </div>
+        <div className="envelope__front">Kör</div>
       </div>
+
+      <p className="newsletter__text">
+        Movement tips, wellness education, practice updates, behind-the-scenes moments, and the
+        occasional special offer. No weird spam. Just things I actually think you&rsquo;ll find
+        useful.
+      </p>
+
+      <form
+        className="newsletter__form"
+        onSubmit={(e) => {
+          e.preventDefault()
+          setSubmitted(true)
+        }}
+      >
+        <label className="visually-hidden" htmlFor="newsletter-email">
+          Your email
+        </label>
+        <input
+          id="newsletter-email"
+          type="email"
+          name="email"
+          placeholder="Your email"
+          required
+          autoComplete="email"
+        />
+        <button type="submit" className="button">
+          Join the circle
+        </button>
+      </form>
+      {submitted && (
+        <p className="newsletter__status" role="status">
+          Sign-ups aren&rsquo;t connected yet — this form is a preview.
+        </p>
+      )}
     </section>
   )
 }

@@ -1,0 +1,65 @@
+.investment {
+  display: grid;
+  justify-items: center;
+  padding: clamp(64px, 8vw, 112px) var(--page-gutter);
+  background: #f1f2f4;
+  text-align: center;
+}
+
+.investment__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.investment__title {
+  margin: 12px 0 20px;
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+}
+
+.investment__text {
+  max-width: 28rem;
+  color: var(--color-muted);
+}
+
+.investment__divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(100%, 340px);
+  margin: 40px 0;
+  color: #c9c9cc;
+}
+
+.investment__divider::before,
+.investment__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #dcdce0;
+}
+
+.investment__visit {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+.investment__price {
+  margin: 8px 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  line-height: 1;
+}
+
+.investment__pay {
+  color: var(--color-muted);
+}
+
+.investment__note {
+  max-width: 30rem;
+  margin: 16px 0 32px;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}

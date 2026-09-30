@@ -1,7 +1,6 @@
-import Button from '../components/Button.jsx'
 import FinalCta from '../components/FinalCta.jsx'
 import PageHeader from '../components/PageHeader.jsx'
-import { BOOKING_URL } from '../content/site.js'
+import Investment from '../sections/Investment.jsx'
 
 const visitIncludes = [
   'Comprehensive assessment',
@@ -61,32 +60,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="section section--sand">
-        <div className="split">
-          <div>
-            <p className="eyebrow">Private pay</p>
-            <h2 className="heading">Your time matters. So does mine.</h2>
-            <div className="prose">
-              <p>Kör is a private-pay concierge practice.</p>
-              <p>
-                If you have out-of-network benefits, documentation may be available for you to
-                submit to your insurance carrier.
-              </p>
-            </div>
-          </div>
-          <div className="card price-card">
-            <p className="card__label">60-minute mobile visit</p>
-            {/* TODO: set the visit price. */}
-            <p className="price-card__amount">$XXX</p>
-            <p>Credit / debit accepted.</p>
-            {/* TODO: add HSA/FSA wording once confirmed. */}
-            <p>[HSA/FSA language once confirmed.]</p>
-            <div>
-              <Button to={BOOKING_URL}>Book a visit</Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Investment />
 
       <FinalCta>
         <p>You don&rsquo;t need to know exactly what&rsquo;s wrong before reaching out.</p>
