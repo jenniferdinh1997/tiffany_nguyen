@@ -1,6 +1,6 @@
 .testimonials {
   padding: clamp(64px, 8vw, 112px) var(--page-gutter);
-  background: #fff;
+  background: var(--color-white);
   text-align: center;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .testimonials__card:nth-child(3n) figcaption {
-  color: #4f4842;
+  color: var(--neutral-muted-strong);
 }
 
 .testimonials__card blockquote {

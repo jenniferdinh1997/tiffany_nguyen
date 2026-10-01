@@ -2,7 +2,7 @@
   display: grid;
   justify-items: center;
   padding: clamp(64px, 8vw, 112px) var(--page-gutter);
-  background: #f1f6e7; /* Calla tint */
+  background: var(--brand-calla-tint); /* Calla tint */
   text-align: center;
 }
 

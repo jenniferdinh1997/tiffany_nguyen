@@ -5,9 +5,9 @@
   min-height: clamp(420px, 55vw, 680px);
   padding: 64px var(--page-gutter) clamp(56px, 8vw, 100px);
   background:
-    linear-gradient(to bottom, rgb(0 0 0 / 0.15), rgb(0 0 0 / 0.6)),
+    linear-gradient(to bottom, rgb(var(--shadow-rgb) / 0.15), rgb(var(--shadow-rgb) / 0.6)),
     url('/images/inquire.jpg') center / cover,
-    linear-gradient(160deg, #234545, var(--brand-turquoise));
+    linear-gradient(160deg, var(--brand-turquoise-darkest), var(--brand-turquoise));
   color: var(--color-cream);
   text-align: center;
 }
@@ -27,7 +27,7 @@
 }
 
 .inquire__text {
-  color: rgb(253 248 243 / 0.9);
+  color: rgb(var(--cream-rgb) / 0.9);
 }
 
 .contact {
@@ -43,7 +43,7 @@
 
 .contact__intro {
   margin: 12px 0 48px;
-  color: rgb(253 248 243 / 0.8);
+  color: rgb(var(--cream-rgb) / 0.8);
 }
 
 .contact__form {
@@ -67,7 +67,7 @@
   width: 100%;
   padding: 8px 4px;
   border: 0;
-  border-bottom: 1px solid rgb(253 248 243 / 0.5);
+  border-bottom: 1px solid rgb(var(--cream-rgb) / 0.5);
   background: transparent;
   color: var(--color-cream);
   font: inherit;
@@ -80,7 +80,7 @@
 }
 
 .contact__form input::placeholder {
-  color: rgb(253 248 243 / 0.4);
+  color: rgb(var(--cream-rgb) / 0.4);
 }
 
 .contact__form input:focus,
@@ -90,7 +90,7 @@
 }
 
 .contact__status {
-  color: rgb(253 248 243 / 0.8);
+  color: rgb(var(--cream-rgb) / 0.8);
 }
 
 @media (max-width: 600px) {

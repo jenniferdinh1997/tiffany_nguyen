@@ -38,7 +38,7 @@
 .marquee {
   padding: 28px 0;
   background: var(--brand-calla);
-  color: #4d5a3a;
+  color: var(--brand-verdant-deep);
 }
 
 .marquee__label {

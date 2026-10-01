@@ -3,7 +3,7 @@
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 40px;
   padding: clamp(48px, 6vw, 80px) var(--page-gutter);
-  border-top: 1px solid rgb(253 248 243 / 0.15);
+  border-top: 1px solid rgb(var(--cream-rgb) / 0.15);
   background: var(--color-black);
   color: var(--color-cream);
 }
@@ -48,7 +48,7 @@
   align-content: start;
   gap: 4px;
   font-size: 0.9rem;
-  color: rgb(253 248 243 / 0.85);
+  color: rgb(var(--cream-rgb) / 0.85);
 }
 
 .footer__social {

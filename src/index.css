@@ -1,28 +1,4 @@
 :root {
-  /* Kör Body brand palette */
-  --brand-calla: #dce8c3;
-  --brand-breath-of-spring: #babd6d;
-  --brand-anthurium: #ffbf9b;
-  --brand-verdant: #819664;
-  --brand-warm-gold: #ffd06c;
-  --brand-cloth: #ebce99;
-  --brand-lotso-bear: #bd655e;
-  --brand-turquoise: #5aa2a2;
-  --brand-muskwood: #c46845;
-
-  /* Working colors built from the palette. The deeper tones keep small text readable. */
-  --color-cream: #fdf8f3;
-  --color-sand: #f8efdf;
-  --color-clay: #a3522f; /* deep Muskwood, for small labels */
-  --color-ink: #1c1917;
-  --color-muted: #625a53;
-  --color-line: rgb(28 25 23 / 0.14);
-  --color-rose: #9c4f49; /* deep Lotso Bear, for body text */
-  --color-blush: #fff4ee; /* Anthurium Nunzia tint */
-  --color-linen: #faf3e6; /* Cloth tint */
-  --color-sky: var(--brand-turquoise);
-  --color-black: #0b0b0b;
-  --photo-placeholder: linear-gradient(145deg, var(--brand-muskwood), var(--brand-cloth));
   /* Brand type
      Instrument Serif: headlines (H1, H2), italic for single accent words
      Absans: body text and paragraphs, regular only
@@ -213,7 +189,7 @@ h2 em {
 }
 
 .section--ink .prose {
-  color: rgb(253 248 243 / 0.78);
+  color: rgb(var(--cream-rgb) / 0.78);
 }
 
 .prose--lead {
@@ -289,7 +265,7 @@ h2 em {
 }
 
 .button--ghost {
-  border-color: rgb(253 248 243 / 0.8);
+  border-color: rgb(var(--cream-rgb) / 0.8);
   background: transparent;
   color: var(--color-cream);
 }
@@ -417,7 +393,7 @@ h2 em {
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgb(253 248 243 / 0.85);
+  color: rgb(var(--cream-rgb) / 0.85);
 }
 
 /* ---------- Forms ---------- */

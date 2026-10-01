@@ -1,0 +1,75 @@
+/*
+  Kör Body colors
+  ---------------
+  The single source of truth for every color on the site.
+  Components never write a hex code; they use the variables below.
+
+  1. Brand palette   the nine official brand colors, exactly as specified
+  2. Brand shades    deeper and lighter versions of brand colors
+  3. Neutrals        cream, ink, black and white
+  4. Site roles      what each color is used for; change these to restyle the site
+*/
+
+:root {
+  /* 1. Brand palette */
+  --brand-calla: #DCE8C3;
+  --brand-breath-of-spring: #BABD6D;
+  --brand-anthurium: #FFBF9B; /* Anthurium Nunzia */
+  --brand-verdant: #819664;
+  --brand-warm-gold: #FFD06C;
+  --brand-cloth: #EBCE99;
+  --brand-lotso-bear: #BD655E;
+  --brand-turquoise: #5AA2A2;
+  --brand-muskwood: #C46845;
+
+  /* 2. Brand shades
+     Deep shades keep small text readable (at least 4.5:1 contrast).
+     Tints are soft section backgrounds. */
+  --brand-lotso-bear-deep: #9C4F49;
+  --brand-muskwood-deep: #A3522F;
+  --brand-muskwood-dark: #8A4A31;
+  --brand-muskwood-darkest: #4A3026;
+  --brand-verdant-deep: #4D5A3A;
+  --brand-verdant-darkest: #3F4A2F;
+  --brand-turquoise-darkest: #234545;
+
+  --brand-anthurium-tint: #FFF4EE;
+  --brand-cloth-tint: #FAF3E6;
+  --brand-cloth-sand: #F8EFDF;
+  --brand-calla-tint: #F1F6E7;
+  --brand-calla-tint-light: #F7FAEF;
+  --brand-warm-gold-tint: #FFF6DD;
+
+  /* 3. Neutrals
+     The -rgb versions are for see-through overlays, e.g. rgb(var(--cream-rgb) / 0.8). */
+  --neutral-white: #FFFFFF;
+  --neutral-cream: #FDF8F3;
+  --neutral-muted: #625A53;
+  --neutral-muted-strong: #4F4842;
+  --neutral-ink: #1C1917;
+  --neutral-black: #0B0B0B;
+
+  --white-rgb: 255 255 255;
+  --cream-rgb: 253 248 243;
+  --ink-rgb: 28 25 23;
+  --black-rgb: 11 11 11;
+  --shadow-rgb: 0 0 0;
+  --muskwood-darkest-rgb: 74 48 38;
+
+  /* 4. Site roles */
+  --color-cream: var(--neutral-cream);
+  --color-sand: var(--brand-cloth-sand);
+  --color-clay: var(--brand-muskwood-deep); /* small labels */
+  --color-ink: var(--neutral-ink); /* main text */
+  --color-muted: var(--neutral-muted); /* secondary text */
+  --color-line: rgb(var(--ink-rgb) / 0.14); /* dividers */
+  --color-rose: var(--brand-lotso-bear-deep); /* text in the red sections */
+  --color-blush: var(--brand-anthurium-tint);
+  --color-linen: var(--brand-cloth-tint);
+  --color-sky: var(--brand-turquoise);
+  --color-black: var(--neutral-black);
+  --color-white: var(--neutral-white);
+  --color-hero-panel: var(--brand-muskwood-darkest);
+
+  --photo-placeholder: linear-gradient(145deg, var(--brand-muskwood), var(--brand-cloth));
+}

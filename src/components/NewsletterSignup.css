@@ -2,7 +2,7 @@
   display: grid;
   justify-items: center;
   padding: clamp(64px, 8vw, 112px) var(--page-gutter);
-  background: #fff6dd; /* Warm Gold tint */
+  background: var(--brand-warm-gold-tint); /* Warm Gold tint */
   text-align: center;
 }
 
@@ -46,8 +46,8 @@
   width: 100px;
   height: 118px;
   border-radius: 6px;
-  background: linear-gradient(to bottom, #fff 55%, var(--brand-warm-gold));
-  box-shadow: 0 6px 14px rgb(0 0 0 / 0.2);
+  background: linear-gradient(to bottom, var(--color-white) 55%, var(--brand-warm-gold));
+  box-shadow: 0 6px 14px rgb(var(--shadow-rgb) / 0.2);
   transform: translateX(-50%);
   animation: envelope-peek 3s ease-in-out infinite alternate;
 }
@@ -72,7 +72,7 @@
   height: 92px;
   border-radius: 8px;
   background: var(--brand-lotso-bear);
-  color: rgb(255 255 255 / 0.3);
+  color: rgb(var(--white-rgb) / 0.3);
   font-family: var(--font-serif);
   font-size: 2rem;
 }
@@ -109,7 +109,7 @@
   padding: 12px 16px;
   border: 1px solid var(--color-line);
   border-radius: 6px;
-  background: #fff;
+  background: var(--color-white);
   font: inherit;
 }
 

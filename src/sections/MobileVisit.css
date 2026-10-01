@@ -4,7 +4,7 @@
   gap: clamp(32px, 4vw, 48px);
   align-items: center;
   padding: clamp(56px, 7vw, 96px) var(--page-gutter);
-  background: #fff;
+  background: var(--color-white);
 }
 
 .mobile-visit__eyebrow {

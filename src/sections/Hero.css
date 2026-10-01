@@ -1,7 +1,6 @@
 /* ---------- Hero ---------- */
 
 .hero {
-  --hero-panel: #4a3026; /* deep Muskwood */
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -12,9 +11,9 @@
   color: var(--color-cream);
   /* Warm gradient shows until the real photo is added. */
   background:
-    linear-gradient(to bottom, rgb(0 0 0 / 0.3), transparent 22%, transparent 45%, rgb(0 0 0 / 0.5)),
+    linear-gradient(to bottom, rgb(var(--shadow-rgb) / 0.3), transparent 22%, transparent 45%, rgb(var(--shadow-rgb) / 0.5)),
     var(--hero-image) center 35% / cover no-repeat,
-    linear-gradient(135deg, #8a4a31, var(--brand-muskwood) 45%, var(--brand-cloth));
+    linear-gradient(135deg, var(--brand-muskwood-dark), var(--brand-muskwood) 45%, var(--brand-cloth));
 }
 
 .hero__content {
@@ -55,17 +54,17 @@
 .hero__intro {
   max-width: 34rem;
   font-size: 1.05rem;
-  color: rgb(253 248 243 / 0.9);
+  color: rgb(var(--cream-rgb) / 0.9);
 }
 
 .hero__meta {
   margin-top: 28px;
   padding-top: 20px;
-  border-top: 1px solid rgb(253 248 243 / 0.3);
+  border-top: 1px solid rgb(var(--cream-rgb) / 0.3);
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgb(253 248 243 / 0.8);
+  color: rgb(var(--cream-rgb) / 0.8);
 }
 
 .hero__tagline,
@@ -108,12 +107,12 @@
       /* The photo is about 0.66x as wide as it is tall, so its left edge sits at 100% - 66svh. */
       linear-gradient(
         to right,
-        var(--hero-panel) calc(100% - 66svh),
-        rgb(74 48 38 / 0) calc(100% - 66svh + 220px)
+        var(--color-hero-panel) calc(100% - 66svh),
+        rgb(var(--muskwood-darkest-rgb) / 0) calc(100% - 66svh + 220px)
       ),
-      linear-gradient(to bottom, rgb(0 0 0 / 0.25), transparent 22%, transparent 70%, rgb(0 0 0 / 0.35)),
+      linear-gradient(to bottom, rgb(var(--shadow-rgb) / 0.25), transparent 22%, transparent 70%, rgb(var(--shadow-rgb) / 0.35)),
       var(--hero-image) right center / auto 100% no-repeat,
-      var(--hero-panel);
+      var(--color-hero-panel);
   }
 }
 

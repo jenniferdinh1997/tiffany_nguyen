@@ -7,6 +7,7 @@ import '@fontsource/montserrat/500.css'
 import '@fontsource/montserrat/600.css'
 import '@fontsource/montserrat/700.css'
 import '@fontsource/dm-sans/400.css'
+import './styles/colors.css'
 import './index.css'
 import App from './App.jsx'
 

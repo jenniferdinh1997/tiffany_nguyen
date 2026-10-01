@@ -17,7 +17,7 @@
   inset: -40px;
   z-index: -1;
   background:
-    linear-gradient(rgb(40 36 34 / 0.45), rgb(40 36 34 / 0.45)),
+    linear-gradient(rgb(var(--ink-rgb) / 0.5), rgb(var(--ink-rgb) / 0.5)),
     url('/images/treatment-room.jpg') center / cover;
   filter: blur(6px);
 }
@@ -26,8 +26,8 @@
   width: clamp(180px, 22vw, 300px);
   padding: 10px;
   border-radius: 40px;
-  background: #0b0b0b;
-  box-shadow: 0 30px 60px rgb(0 0 0 / 0.35);
+  background: var(--color-black);
+  box-shadow: 0 30px 60px rgb(var(--shadow-rgb) / 0.35);
 }
 
 .press__phone img {
@@ -46,7 +46,7 @@
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.03em;
-  text-shadow: 0 2px 12px rgb(0 0 0 / 0.25);
+  text-shadow: 0 2px 12px rgb(var(--shadow-rgb) / 0.25);
 }
 
 .press__name {

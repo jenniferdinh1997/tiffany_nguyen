@@ -5,9 +5,9 @@
   min-height: clamp(420px, 60vw, 720px);
   padding: 64px var(--page-gutter) clamp(56px, 8vw, 110px);
   background:
-    linear-gradient(to bottom, rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.55)),
+    linear-gradient(to bottom, rgb(var(--shadow-rgb) / 0.1), rgb(var(--shadow-rgb) / 0.55)),
     url('/images/journal.jpg') center / cover,
-    linear-gradient(160deg, #3f4a2f, var(--brand-verdant));
+    linear-gradient(160deg, var(--brand-verdant-darkest), var(--brand-verdant));
   color: var(--color-cream);
   text-align: center;
 }
@@ -28,5 +28,5 @@
 
 .journal-hero__text {
   max-width: 34rem;
-  color: rgb(253 248 243 / 0.9);
+  color: rgb(var(--cream-rgb) / 0.9);
 }
