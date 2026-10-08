@@ -77,7 +77,6 @@ h2 em {
 .button,
 .text-link,
 .card__label,
-.form__field,
 .navbar,
 .footer__nav,
 .footer__sub,
@@ -209,14 +208,6 @@ h2 em {
 
 /* ---------- Buttons ---------- */
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px 24px;
-  margin-top: 40px;
-}
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -331,23 +322,6 @@ h2 em {
   color: var(--color-clay);
 }
 
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.tag-list li {
-  padding: 8px 18px;
-  border: 1px solid var(--color-line);
-  border-radius: 999px;
-  background: var(--color-cream);
-  font-size: 0.9rem;
-}
-
 .check-list {
   display: grid;
   gap: 10px;
@@ -369,125 +343,4 @@ h2 em {
   width: 12px;
   height: 1px;
   background: var(--color-clay);
-}
-
-/* ---------- Photo placeholder ---------- */
-
-.photo {
-  position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-  background: var(--photo-placeholder);
-  aspect-ratio: 4 / 5;
-}
-
-.photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.photo__label {
-  position: absolute;
-  inset: auto 16px 16px;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgb(var(--cream-rgb) / 0.85);
-}
-
-/* ---------- Forms ---------- */
-
-.form {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.form__field {
-  display: grid;
-  gap: 8px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.form__field--full {
-  grid-column: 1 / -1;
-}
-
-.form input,
-.form textarea {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid var(--color-line);
-  border-radius: 12px;
-  background: var(--color-cream);
-  color: var(--color-ink);
-  font: inherit;
-  font-size: 1rem;
-  letter-spacing: normal;
-  text-transform: none;
-}
-
-.form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.form__status {
-  grid-column: 1 / -1;
-  color: var(--color-muted);
-}
-
-@media (max-width: 600px) {
-  .form {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ---------- Page header ---------- */
-
-.page-header {
-  padding-top: clamp(64px, 9vw, 140px);
-  padding-bottom: clamp(48px, 6vw, 96px);
-}
-
-.page-header__title {
-  max-width: 16ch;
-  margin-bottom: 32px;
-  font-family: var(--font-serif);
-  font-size: clamp(2.75rem, 7vw, 6.5rem);
-  line-height: 0.98;
-}
-
-
-.services__list {
-  margin-top: 20px;
-  font-size: 1.1rem;
-}
-
-.journal {
-  display: grid;
-  gap: 20px;
-}
-
-.journal-list {
-  background: var(--color-linen);
-}
-
-.journal-list__more {
-  display: flex;
-  justify-content: center;
-  margin-top: 48px;
-}
-
-.contact__form {
-  max-width: 56rem;
-}
-
-
-.feature-card h3 {
-  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
 }

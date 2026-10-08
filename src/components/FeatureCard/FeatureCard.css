@@ -1,0 +1,5 @@
+/* Featured VoyageLA article card. */
+
+.feature-card h3 {
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+}

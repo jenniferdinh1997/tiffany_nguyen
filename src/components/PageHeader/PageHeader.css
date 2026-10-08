@@ -1,0 +1,14 @@
+/* Title block at the top of every page except home. */
+
+.page-header {
+  padding-top: clamp(64px, 9vw, 140px);
+  padding-bottom: clamp(48px, 6vw, 96px);
+}
+
+.page-header__title {
+  max-width: 16ch;
+  margin-bottom: 32px;
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 7vw, 6.5rem);
+  line-height: 0.98;
+}

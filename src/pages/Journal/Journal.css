@@ -1,0 +1,10 @@
+/* Journal page. */
+
+.journal {
+  display: grid;
+  gap: 20px;
+}
+
+.journal-page__list {
+  background: var(--color-linen);
+}

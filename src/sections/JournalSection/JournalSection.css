@@ -1,0 +1,11 @@
+/* Article list under the journal banner. */
+
+.journal-list {
+  background: var(--color-linen);
+}
+
+.journal-list__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
